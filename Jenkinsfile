@@ -15,7 +15,7 @@ pipeline {
                 }
                 steps
             steps {
-                echo "Hello"
+                echo "Hello, $(PERSON)"
                 sh 'mvn --version'
                 echo 'Building2..'
             }
