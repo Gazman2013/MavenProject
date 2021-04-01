@@ -5,10 +5,16 @@ pipeline {
   }
     stages {
         stage('Build') {
+            input{
+                message "are you hungry?"
+                ok "Yes, I am"
+                submitrer "lex,jonh"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Jenkins',
+                           description: 'Description about qesstion')
+                }
             steps {
-                sh 'mvn --version'
-                echo 'Building1..'
-                echo 'Building2..'
+                echo "Hello, ${PERSON}"
             }
         }
         stage('Test') {
