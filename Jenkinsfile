@@ -8,7 +8,7 @@ pipeline {
             input{
                 message "are you hungry?"
                 ok "Yes, I am"
-                submitre "lex,jonh"
+                submitter "lex,jonh"
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Jenkins',
                            description: 'Description about qesstion')
